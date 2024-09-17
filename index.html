@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment_system_TS</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header"></header>
+        <main class="main">
+            <aside class="aside"></aside>
+            <content class="content">
+                <div class="content-block"></div>
+                <div class="content-block"></div>
+                <div class="content-block"></div>
+                <div class="content-block"></div>
+                <div class="content-block"></div>
+                <div class="content-block"></div>
+                <div class="content-block"></div>
+                <div class="content-block"></div>
+                <div class="content-block"></div>
+            </content>
+            <div class="filters">
+                <div class="filters__all-comments">
+                    <div class="filters__all-comments_text">Комментарии</div>
+                    <div class="filters__all-comments_number">(80)</div>
+                </div>
+                <div class="filters__dropdown-menu">
+                    <button class="filters__dropdown-menu_button">По количеству оценок</button>
+                    <div class="filters__dropdown-menu_content">
+                        <div class="filters__dropdown-menu_content_container">
+                            <div class="filters__dropdown-menu_content-checked"></div>
+                            <button class="filters__dropdown-menu_content-btn">По дате</button>
+                        </div>
+                        <div class="filters__dropdown-menu_content_container">
+                            <div class="filters__dropdown-menu_content-checked"></div>
+                            <button class="filters__dropdown-menu_content-btn">По количеству оценок</button>
+                        </div>
+                        <div class="filters__dropdown-menu_content_container">
+                            <div class="filters__dropdown-menu_content-checked"></div>
+                            <button class="filters__dropdown-menu_content-btn">По актуальности</button>
+                        </div>
+                        <div class="filters__dropdown-menu_content_container">
+                            <div class="filters__dropdown-menu_content-checked"></div>
+                            <button class="filters__dropdown-menu_content-btn">По количеству ответов</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters__triangle"></div>
+                <div class="filters__favourites">
+                    <div class="filters__favourites_text">Избранное</div>
+                    <div class="filters__favourites_heart-logo"></div>
+                </div>
+            </div>
+            <div class="comments">
+                <div class="comments__user-form">
+                    <div class="comments__user-form_user-picture"></div>
+                    <form action="" class="user-form__form">
+                        <div class="user-form__labels">
+                            <div class="user-form__labels_container">
+                            <label for="username" class="user-form__labels_name">Максим Авдеенко</label>
+                            <label for="character-limit" class="user-form__labels_character-limit">Макс. 1000 символов</label>
+                            </div>
+                        </div>
+                        <div class="user-form__inputs">
+                            <textarea placeholder="Введите текст сообщения..." class="user-form__inputs_input"></textarea>
+                            <button class="user-form__inputs_send-button" disabled>Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./entities/inputHandler.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

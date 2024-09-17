@@ -1,0 +1,324 @@
+@import url(./normalize.css);
+@import url(../fonts/fonts.css);
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1440px;
+    transform: translate(-50%);
+    left: 50%;
+}
+
+.header {
+    width: 1440px;
+    height: 101px;
+    background-color: #D9D9D9;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: 582px 55px auto;
+}
+
+.aside {
+    grid-column: 1;
+    grid-row: 1 / 2;
+    width: 203px;
+    height: 1302px;
+    background-color: #D9D9D9;
+    margin-right: 86px;
+    cursor: pointer;
+}
+
+.content {
+    width: 1022px;
+    height: 582px;
+    grid-column: 2 / 3;
+    grid-row: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    column-gap: 48px;
+    row-gap: 30px;
+}
+
+.content-block {
+    width: 487px;
+    height: 61px;
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
+
+.content-block:nth-last-child(1) {
+    width: 1022px;
+    height: 168px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filters {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    width: 1022px;
+    height: 55px;
+    border-top: 3px solid #D9D9D9;
+    display: flex;
+}
+
+.filters__all-comments {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 55px;
+    height: 32px;
+    gap: 13px;
+    border-bottom: 3px solid #000000;
+    cursor: pointer;
+}
+
+.filters__all-comments_text {
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+}
+
+.filters__all-comments_number {
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    opacity: 0.4;
+}
+
+.filters__dropdown-menu {
+    margin-top: 25px;
+    gap: 7px;
+    position: relative;
+    display: inline-block;
+}
+
+.filters__dropdown-menu_button {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    opacity: 0.4;
+    height: 19px;
+    border: none;
+    border-bottom: 2px solid #000000;
+    cursor: pointer;
+    padding: 0;
+}
+
+.filters__dropdown-menu_content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    z-index: 1;
+    width: 229px;
+    height: 108px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.filters__dropdown-menu_content_container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.filters__dropdown-menu_content-checked {
+    background-color: #FFFFFF;
+    /* mask-image: url(../images/checked.svg); */
+    /* background-color: #000000; */
+    width: 15px;
+    height: 15px;
+    opacity: 0.4;
+    margin: 0 7px 0 8px;
+    margin-top: 1px;
+}
+
+.filters__dropdown-menu_content_container:nth-child(1) {
+    margin-top: 8px;
+}
+
+.filters__dropdown-menu_content_container:nth-child(2) .filters__dropdown-menu_content-checked {
+    mask-image: url(../images/checked.svg);
+    background-color: #000000;
+}
+
+.filters__dropdown-menu_content-btn {
+    display: block;
+    border: none;
+    background-color: #FFFFFF;
+    padding: 0;
+    width: 183px;
+    height: 19px;
+    text-align: left;
+    opacity: 0.4;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    cursor: pointer;
+}
+
+.filters__triangle {
+    mask-image: url(../images/triangle.png);
+    opacity: 0.4;
+    background-color: #000000;
+    width: 17px;
+    height: 15px;
+    margin-top: 28px;
+    margin-right: 42px;
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+.filters__favourites {
+    display: flex;
+    margin-top: 25px;
+    gap: 9.5px;
+    cursor: pointer;
+}
+
+.filters__favourites_text {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    opacity: 0.4;
+    height: 20px;
+    border-bottom: 2px solid #000000;
+}
+
+.filters__favourites_heart-logo {
+    background: url(../images/heart-logo.png);
+    opacity: 0.4;
+    background-size: cover;
+    width: 23px;
+    height: 22px;
+    margin-top: -2px;
+}
+
+.comments {
+    grid-column: 2 / 3;
+    grid-row: 3;
+    margin-top: 32px;
+}
+
+.comments__user-form {
+    display: flex;
+    gap: 30px;
+}
+
+.comments__user-form_user-picture {
+    background-image: url(../images/user-picture.jpg);
+    background-size: cover;
+    width: 61px;
+    height: 61px;
+    cursor: pointer;
+}
+
+.user-form__labels {
+    display: flex;
+    gap: 30px;
+}
+
+.user-form__labels_container {
+    display: flex;
+    justify-content: space-between;
+    width: 688px;
+    margin-bottom: 15px;
+}
+
+.user-form__labels_name {
+    position: relative;
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: #122AC0;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+.user-form__labels_character-limit {
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 16.94px;
+    opacity: 0.4;
+    text-wrap: nowrap;
+}
+
+.user-form__labels_limit-alert {
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color: #FF0000;
+    width: 208px;
+    height: 17px;
+    text-wrap: nowrap;
+}
+
+.user-form__inputs {
+    display: flex;
+    gap: 30px;
+}
+
+.user-form__inputs_input {
+    resize: none;
+    overflow: hidden;
+    outline: none;
+    width: 688px;
+    min-height: 61px;
+    height: 61px;
+    border-radius: 5px;
+    border-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px 20px 20px 30px;
+    white-space: wrap;
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+}
+
+.user-form__inputs_input::placeholder {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    opacity: 0.4;
+    color: #000000;
+}
+
+.user-form__inputs_send-button {
+    width: 213px;
+    height: 61px;
+    border-radius: 5px;
+    border: none;
+    background-color: #A1A1A1;
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    color: #000000;
+    opacity: 0.4;
+    cursor: default;
+}
