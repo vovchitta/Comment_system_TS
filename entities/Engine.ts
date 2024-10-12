@@ -1,4 +1,4 @@
-import { InputHandler } from "../entities/InputHandler";
+import { InputHandler } from "./inputHandler";
 
 export class Engine {
     inputHandler: InputHandler;

@@ -12,7 +12,6 @@ export class InputHandler {
     private replyLimit: HTMLElement;
 
     constructor() {
-        
     }
 
     public inputHandlerCheck = (event: Event): void => {

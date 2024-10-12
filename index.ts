@@ -1,4 +1,4 @@
-import {Engine} from "./entities/Engine.js";
+import {Engine} from "./entities/Engine";
 
 const engine: any = new Engine();
 
