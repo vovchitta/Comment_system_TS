@@ -103,7 +103,6 @@
 
 .filters__dropdown-menu {
     margin-top: 25px;
-    gap: 7px;
     position: relative;
     display: inline-block;
 }
@@ -119,6 +118,7 @@
     border-bottom: 2px solid #000000;
     cursor: pointer;
     padding: 0;
+    background-color: #FFFFFF;
 }
 
 .filters__dropdown-menu_content {
@@ -141,8 +141,6 @@
 
 .filters__dropdown-menu_content-checked {
     background-color: #FFFFFF;
-    /* mask-image: url(../images/checked.svg); */
-    /* background-color: #000000; */
     width: 15px;
     height: 15px;
     opacity: 0.4;
@@ -222,14 +220,16 @@
 .comments__user-form {
     display: flex;
     gap: 30px;
+    margin-bottom: 40px;
 }
 
 .comments__user-form_user-picture {
-    background-image: url(../images/user-picture.jpg);
+    /* background-image: url(../images/user-picture.jpg); */
     background-size: cover;
     width: 61px;
     height: 61px;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .user-form__labels {
@@ -255,7 +255,8 @@
     text-wrap: nowrap;
 }
 
-.user-form__labels_character-limit {
+.user-form__labels_character-limit,
+.comments__user-message_character-limit {
     font-family: "Inter";
     font-size: 14px;
     font-style: italic;
@@ -276,12 +277,14 @@
     text-wrap: nowrap;
 }
 
-.user-form__inputs {
+.user-form__inputs,
+.comments__user-message_reply-inputs {
     display: flex;
     gap: 30px;
 }
 
-.user-form__inputs_input {
+.user-form__inputs_input,
+.user-message__reply-inputs_input {
     resize: none;
     overflow: hidden;
     outline: none;
@@ -297,18 +300,11 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 21.78px;
-}
-
-.user-form__inputs_input::placeholder {
-    font-family: "Inter";
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21.78px;
     opacity: 0.4;
-    color: #000000;
 }
 
-.user-form__inputs_send-button {
+.user-form__inputs_send-button,
+.user-message__reply-inputs_send-btn {
     width: 213px;
     height: 61px;
     border-radius: 5px;
@@ -322,3 +318,226 @@
     opacity: 0.4;
     cursor: default;
 }
+
+.comments__user-message_origin {
+    height: auto;
+    width: 1007px;
+    display: flex;
+    gap:30px;
+    margin-bottom: 28px;
+}
+
+.comments__user-message_replied {
+    height: auto;
+    width: 916px;
+    display: flex;
+    gap:30px;
+    margin: 0 0 28px 91px;
+}
+
+.user-message__origin_picture {
+    background-size: cover;
+    width: 61px;
+    height: 61px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.user-message__replied_picture {
+    background-size: cover;
+    width: 61px;
+    height: 61px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.origin__content_parameter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.replied__content_parameter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.content__parameter_user-name {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: #122AC0;
+    cursor: pointer;
+}
+
+.contant__parameter_date {
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    opacity: 0.4;
+    display: flex;
+    align-items: end;
+}
+
+.origin__content_text-content {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    width: 916px;
+    margin-bottom: 15px;
+}
+
+.replied__content_text-content {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    width: 825px;
+    margin-bottom: 15px;
+}
+
+.origin__content_actions {
+    display: flex;
+}
+
+.replied__content_actions {
+    display: flex;
+}
+
+.content__actions_reply {
+    display: flex;
+    gap: 10px;
+}
+
+.actions__reply_reply-logo {
+    background-image: url(../images/actions__reply_reply-btn.svg);
+    background-size: cover;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.content__parameter_reply-btn {
+    background-image: url(../images/actions__reply_reply-btn.svg);
+    background-size: cover;
+    width: 22px;
+    height: 22px;
+}
+
+.content__parameter_replied-user {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    opacity: 0.4;
+}
+
+.actions__reply_reply-btn {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    opacity: 0.4;
+    cursor: pointer;
+    margin-right: 20px;
+    background-color: #FFFFFF;
+    border: none;
+    padding: 0;
+}
+
+.content__actions_favourites {
+    display: flex;
+    gap: 7px;
+}
+
+.replied__actions_favourites {
+    display: flex;
+    gap: 7px;
+}
+
+.actions__favourites_heart {
+    /* background-image: url(../images/actions__favourites_heart_white.jpg); */
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.replied__favourites_heart {
+    background-image: url(../images/actions__favourites_heart_white.jpg);
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.actions__favourites_text {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    opacity: 0.4;
+    margin-right: 30px;
+}
+
+.replied__favourites_text {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    opacity: 0.4;
+    margin-right: 30px;
+}
+
+.content__actions_score {
+    display: flex;
+    gap: 10px;
+}
+
+.actions__score_minus-btn {
+    background-image: url(../images/actions__score_minus-btn.png);
+    background-size: cover;
+    width: 20px;
+    height: 23px;
+    cursor: pointer;
+    position: relative;
+    bottom: 2px;
+}
+
+.action__score_score-rate {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: #8AC540;
+}
+
+.actions__score_plus-btn {
+    background-image: url(../images/actions__score_plus-btn.png);
+    background-size: cover;
+    width: 20px;
+    height: 23px;
+    cursor: pointer;
+    position: relative;
+    bottom: 2px;
+}
+
+.comments__user-message_reply-inputs {
+    margin-left: 91px;
+    margin-bottom: 30px;
+}
+
+.comments__user-message_character-limit {
+    display: block;
+    margin-left: 91px;
+    width: 688px;
+    text-align: end;
+    margin-bottom: 20px;
+}
+
+
+
