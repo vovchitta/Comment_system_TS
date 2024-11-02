@@ -30,20 +30,20 @@
                 <div class="filters__dropdown-menu">
                     <button class="filters__dropdown-menu_button">По количеству оценок</button>
                     <div class="filters__dropdown-menu_content">
-                        <div class="filters__dropdown-menu_content_container">
-                            <div class="filters__dropdown-menu_content-checked"></div>
+                        <div class="filters__dropdown-menu_content_container" id="sort-by-date">
+                            <img class="filters__dropdown-menu_content-checked"/>
                             <button class="filters__dropdown-menu_content-btn">По дате</button>
                         </div>
-                        <div class="filters__dropdown-menu_content_container">
-                            <div class="filters__dropdown-menu_content-checked"></div>
+                        <div class="filters__dropdown-menu_content_container" id="sort-by-rating">
+                            <img class="filters__dropdown-menu_content-checked"/>
                             <button class="filters__dropdown-menu_content-btn">По количеству оценок</button>
                         </div>
-                        <div class="filters__dropdown-menu_content_container">
-                            <div class="filters__dropdown-menu_content-checked"></div>
+                        <div class="filters__dropdown-menu_content_container" id="sort-by-favourites">
+                            <img class="filters__dropdown-menu_content-checked"/>
                             <button class="filters__dropdown-menu_content-btn">По актуальности</button>
                         </div>
-                        <div class="filters__dropdown-menu_content_container">
-                            <div class="filters__dropdown-menu_content-checked"></div>
+                        <div class="filters__dropdown-menu_content_container" id="sort-by-replies">
+                            <img class="filters__dropdown-menu_content-checked"/>
                             <button class="filters__dropdown-menu_content-btn">По количеству ответов</button>
                         </div>
                     </div>
@@ -56,11 +56,11 @@
             </div>
             <div class="comments">
                 <div class="comments__user-form">
-                    <img src="./images/user-picture.jpg" class="comments__user-form_user-picture"></img>
+                    <img class="comments__user-form_user-picture" alt="user_picture"/>
                     <form action="" class="user-form__form">
                         <div class="user-form__labels">
                             <div class="user-form__labels_container">
-                            <label class="user-form__labels_name">Максим Авдеенко</label>
+                            <label class="user-form__labels_name"></label>
                             <label class="user-form__labels_character-limit">Макс. 1000 символов</label>
                             </div>
                         </div>
@@ -74,6 +74,13 @@
             </div>
         </main>
     </div>
-    <script type="module" src="./index.js"></script>
+    <script src="./entities/StorageLogic.js"></script>
+    <script src="./entities/InputHandler.js"></script>
+    <script src="./entities/Rating.js"></script>
+    <script src="./entities/ReplyInputHandler.js"></script>
+    <script src="./entities/Favourites.js"></script>
+    <script src="./entities/Sorting.js"></script>
+    <script src="./entities/Engine.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

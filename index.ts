@@ -1,5 +1,3 @@
-import {Engine} from "./entities/Engine";
+const engine: Engine = new Engine();
 
-const engine: any = new Engine();
-
-engine.start();
+engine.loop();
